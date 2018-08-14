@@ -60,10 +60,13 @@
                                     <action selector="buttonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="17E-TM-9cz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a12-Dk-H6B">
-                                <rect key="frame" x="16" y="457" width="343" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a12-Dk-H6B">
+                                <rect key="frame" x="16" y="515" width="343" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Tiq-cg-ecx"/>
+                                    <constraint firstAttribute="width" constant="343" id="UEo-Lu-zO2"/>
+                                </constraints>
                                 <state key="normal" title="Restart">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -75,9 +78,13 @@
                         <constraints>
                             <constraint firstItem="YYD-qC-cgr" firstAttribute="top" secondItem="u0E-Z6-us4" secondAttribute="bottom" constant="34" id="1pn-V9-Sph"/>
                             <constraint firstItem="Erf-gv-fGo" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="48o-b2-ESo"/>
+                            <constraint firstAttribute="trailing" secondItem="a12-Dk-H6B" secondAttribute="trailing" constant="16" id="7Uv-zE-0HE"/>
                             <constraint firstAttribute="trailing" secondItem="u0E-Z6-us4" secondAttribute="trailing" constant="16" id="A5L-N2-gpr"/>
+                            <constraint firstItem="a12-Dk-H6B" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="CuE-hy-ejN"/>
+                            <constraint firstItem="a12-Dk-H6B" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="EvC-O8-kHQ"/>
                             <constraint firstItem="u0E-Z6-us4" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="16" id="H73-ur-bFp"/>
                             <constraint firstItem="amk-E0-c5D" firstAttribute="trailing" secondItem="kh9-bI-dsS" secondAttribute="trailingMargin" id="Hea-Xq-KoH"/>
+                            <constraint firstItem="a12-Dk-H6B" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="JCF-P4-lWV"/>
                             <constraint firstItem="amk-E0-c5D" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="SOg-Hz-lzD"/>
                             <constraint firstItem="Erf-gv-fGo" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="TjW-ZR-YTx"/>
                             <constraint firstItem="amk-E0-c5D" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="UWG-Ch-uBS"/>
@@ -87,6 +94,7 @@
                             <constraint firstAttribute="trailing" secondItem="YYD-qC-cgr" secondAttribute="trailing" constant="16" id="mba-eL-D4o"/>
                             <constraint firstItem="u0E-Z6-us4" firstAttribute="top" secondItem="amk-E0-c5D" secondAttribute="bottom" constant="8" id="o7B-8v-9JJ"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="Erf-gv-fGo" secondAttribute="bottom" id="oHQ-qB-aKu"/>
+                            <constraint firstItem="u0E-Z6-us4" firstAttribute="top" secondItem="a12-Dk-H6B" secondAttribute="bottom" constant="-50" id="qB3-4z-Pb2"/>
                         </constraints>
                     </view>
                     <connections>
