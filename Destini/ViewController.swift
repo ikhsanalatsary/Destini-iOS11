@@ -33,10 +33,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var topButton: UIButton!         // Has TAG = 1
     @IBOutlet weak var bottomButton: UIButton!      // Has TAG = 2
     @IBOutlet weak var storyTextView: UILabel!
+    @IBOutlet weak var restartButton: UIButton!
     
     // TODO Step 5: Initialise instance variables here
-    
-    
+    var storyIndex: Int = 1
     
     
     override func viewDidLoad() {
@@ -44,7 +44,7 @@ class ViewController: UIViewController {
         
         
         // TODO Step 3: Set the text for the storyTextView, topButton, bottomButton, and to T1_Story, T1_Ans1, and T1_Ans2
-        
+        restart()
     }
 
     
@@ -52,13 +52,57 @@ class ViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
     
         // TODO Step 4: Write an IF-Statement to update the views
+        if sender.tag == 1 && (storyIndex == 1 || storyIndex == 2) {
+            storyIndex = 3
+            updateUI(story: story3, answer1: answer3a, answer2: answer3b)
+        } else if sender.tag == 1 && storyIndex == 3 {
+            storyIndex = 6
+            updateUI(story: story6)
+        }
+        else if sender.tag == 2 && storyIndex == 1 {
+            storyIndex = 2
+            updateUI(story: story2, answer1: answer2a, answer2: answer2b)
+        }
+        else if sender.tag == 2 && storyIndex == 2 {
+            storyIndex = 4
+            updateUI(story: story4)
+        }
+        else if sender.tag == 2 && storyIndex == 3 {
+            storyIndex = 5
+            updateUI(story: story5)
+        }
+        else {
+            storyIndex = 1
+            restart()
+        }
                 
         // TODO Step 6: Modify the IF-Statement to complete the story
+        if storyIndex >= 4 && storyIndex <= 6 {
+            restartButton.isHidden = false
+        }
         
     
     }
     
-
+    func updateUI(story: String, answer1: String? = nil, answer2: String? = nil) {
+        storyTextView.text = story
+        if answer1 != nil && answer2 != nil {
+            topButton.setTitle(answer1, for: .normal)
+            bottomButton.setTitle(answer2, for: .normal)
+        }
+        else {
+            topButton.isHidden = true
+            bottomButton.isHidden = true
+        }
+        
+    }
+    
+    func restart() {
+        restartButton.isHidden = true
+        topButton.isHidden = false
+        bottomButton.isHidden = false
+        updateUI(story: story1, answer1: answer1a, answer2: answer1b)
+    }
 
 
 }
